@@ -24,6 +24,7 @@ By default the Pi does not have a Line In port, so we opt to use an USB sound ca
 	}
 	```
 4. Run `alsamixer` and you should be albe to see that the USB sound card is the default audio device.
+
 **Note :** The newest version of Raspbian (a.k.a. Jessie) comes with a new version of alsa-utils (1.0.28), which has a bug while recording: it doesn’t stop even a ‘—duration' switch is given, and generates lots of useless audio files. To fix this problem, we have to downgrade alsa-util to an earlier version (1.0.25) :
 
   1. Run `sudo nano /etc/apt/sources.list` command and add these lines to last of the file:
